@@ -1,5 +1,8 @@
 const express = require('express');
 const autocannon = require('autocannon');
+
+// Load and start cron job in the background automatically
+require('./cron_test.js');
 // CRITICAL PERFORMANCE FIX: Increase thread pool for DNS lookups
 process.env.UV_THREADPOOL_SIZE = 256;
 
